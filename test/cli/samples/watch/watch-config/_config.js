@@ -4,8 +4,7 @@ const path = require('path');
 let configFile;
 let currentlyBundling;
 
-const updateConfigDelayed = (content) =>
-	setTimeout(() => fs.writeFileSync(configFile, content), 100);
+const updateConfigDelayed = content => setTimeout(() => fs.writeFileSync(configFile, content), 200);
 
 module.exports = {
 	description: 'watches the config file',
@@ -63,5 +62,5 @@ module.exports = {
 					return true;
 			}
 		}
-	},
+	}
 };
